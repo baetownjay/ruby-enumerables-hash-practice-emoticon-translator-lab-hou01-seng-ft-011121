@@ -24,9 +24,9 @@ def get_japanese_emoticon(yaml_dir, eng_symbol)
   english_loop = final_hash.each do |sym_name, languages|
     languages.each do |language, symbol|
       binding.pry
-  #hash.each do |word, eng_syms|
-   # if hash[word][eng_syms][0] == eng_symbol
-    #  puts hash[word][eng_syms][1]
+      if language == :english && eng_symbol == symbol
+        return language[:japanese]
+  
     end
   end
 end
