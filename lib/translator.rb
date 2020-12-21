@@ -20,6 +20,7 @@ end
 def get_japanese_emoticon(yaml_dir, eng_symbol)
   # code goes here
   hash_final = load_library(yaml_dir)
+  binding.pry
   
   english_loop = hash_final.each do |sym_name, languages|
     languages.each do |language, symbol|
