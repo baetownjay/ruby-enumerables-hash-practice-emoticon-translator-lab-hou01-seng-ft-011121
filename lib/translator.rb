@@ -17,18 +17,23 @@ def load_library(file_path)
   final_hash
 end
 
-def get_japanese_emoticon(hash, eng_symbol)
+def get_japanese_emoticon(yaml_dir, eng_symbol)
   # code goes here
+  final_hash = load_library(yaml_dir)
+  
+  english_loop = final_hash.each do |sym_name, languages|
+    languages.each do |language, symbol|
+      binding.pry
   #hash.each do |word, eng_syms|
    # if hash[word][eng_syms][0] == eng_symbol
     #  puts hash[word][eng_syms][1]
-   # end
-  #end
+    end
+  end
 end
 
-def get_english_meaning(which_file, jap_symbol)
+def get_english_meaning(yaml_dir, jap_symbol)
   # code goes here
-  final_hash = load_library(which_file)
+  final_hash = load_library(yaml_dir)
   
   japanese_loop = final_hash.each do |sym_name, languages|
     languages.each do |language, symbol|
