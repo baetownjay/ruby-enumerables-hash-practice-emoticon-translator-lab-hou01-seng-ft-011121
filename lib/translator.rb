@@ -19,7 +19,7 @@ end
 
 
 
-def get_japanese_emoticon(yaml_dir, eng_emoticon)
+def get_japanese_emoticon(yaml_dir, eng_symbol)
   # code goes here
   hash_final = load_library(yaml_dir)
   #binding.pry
@@ -27,9 +27,9 @@ def get_japanese_emoticon(yaml_dir, eng_emoticon)
   english_loop = hash_final.each do |sym_name, languages|
     languages.each do |language, symbol|
       #binding.pry
-      if language == :english && eng_emoticon == symbol
-        return language[:japanese]
-      end
+      #if language == :english && eng_symbol == symbol
+       # return language[:japanese]
+     # end
     end
   end
   return "Sorry, that emoticon was not found"
