@@ -27,7 +27,7 @@ def get_japanese_emoticon(yaml_dir, eng_symbol)
       if language == :english && eng_symbol == symbol
         return language[:japanese]
         binding.pry
-        hi = 23
+        puts 23
       end
     end
   end
