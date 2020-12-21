@@ -35,6 +35,8 @@ def get_english_meaning(which_file, jap_symbol)
       #binding.pry
       if symbol == jap_symbol
         return sym_name
+      else
+        return 
       end
     end
   end
