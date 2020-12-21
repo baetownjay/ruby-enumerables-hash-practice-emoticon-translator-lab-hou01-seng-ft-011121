@@ -19,9 +19,9 @@ end
 
 def get_japanese_emoticon(yaml_dir, eng_symbol)
   # code goes here
-  final_hash = load_library(yaml_dir)
+  hash_final = load_library(yaml_dir)
   
-  english_loop = final_hash.each do |sym_name, languages|
+  english_loop = hash_final.each do |sym_name, languages|
     languages.each do |language, symbol|
       #binding.pry
       if language == :english && eng_symbol == symbol
@@ -29,6 +29,7 @@ def get_japanese_emoticon(yaml_dir, eng_symbol)
       end
     end
   end
+  return "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning(yaml_dir, jap_symbol)
