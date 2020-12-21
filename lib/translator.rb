@@ -36,7 +36,7 @@ def get_english_meaning(which_file, jap_symbol)
       if symbol == jap_symbol
         return sym_name
       else
-        return 
+        return "Sorry, that emoticon was not found"
       end
     end
   end
