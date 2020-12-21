@@ -14,7 +14,7 @@ def load_library(file_path)
     hash[key][:english] = values.shift
     hash[key][:japanese] = values.shift
   end
-  $final_hash
+  final_hash
 end
 
 def get_japanese_emoticon(hash, eng_symbol)
