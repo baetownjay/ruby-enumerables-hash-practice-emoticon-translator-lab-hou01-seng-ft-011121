@@ -14,7 +14,7 @@ def load_library(file_path)
     hash[key][:english] = values.shift
     hash[key][:japanese] = values.shift
   end
-  final_hash
+  $final_hash
 end
 
 def get_japanese_emoticon(hash, eng_symbol)
@@ -28,7 +28,7 @@ end
 
 def get_english_meaning(which_file, jap_symbol)
   # code goes here
-  load_library(which_file)
+  final_hash = load_library(which_file)
   
   japanese_loop = final_hash.each do |sym_name, languages|
     languages.each do |language, symbol|
