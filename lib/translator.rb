@@ -26,17 +26,10 @@ def get_japanese_emoticon(hash, eng_symbol)
   #end
 end
 
-def get_english_meaning(file_path, jap_symbol)
+def get_english_meaning(which_file, jap_symbol)
   # code goes here
-  inside_yaml_file = YAML.load_file(file_path)
+  load_library(which_file)
   
-  final_hash = inside_yaml_file.each_with_object({}) do |(key, values), hash|
-  
-    hash[key] = {}
-  
-    hash[key][:english] = values.shift
-    hash[key][:japanese] = values.shift
-  end
   japanese_loop = final_hash.each do |sym_name, languages|
     languages.each do |language, symbol|
       #binding.pry
